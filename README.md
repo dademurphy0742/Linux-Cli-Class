@@ -16,3 +16,11 @@ Linux Sandbox RPG is an interactive Python CLI game that helps you learn and pra
 - **Hints system**: Each round gives a description of the command to help you recall it.  
 - **Practical explanations**: After each answer, see a detailed explanation, usage format, and real-world examples.  
 - **Expandable dataset**: Commands are loaded from a JSON file, making it easy to scale up to hundreds of commands.  
+
+---
+
+## Usage
+
+- git clone https://github.com/dademurphy0742/Linux-Sandbox-RPG.git
+- cd Linux-Sandbox-RPG
+- python3 linuxsandboxrpg.py
