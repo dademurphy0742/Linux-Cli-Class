@@ -2,16 +2,17 @@
 
 # Linux Sandbox RPG
 
-🔥 **Learn Linux Commands While Playing a Game!** 🔥
+🔥 **Learn Linux Commands Through a Fun CLI Trivia Game!** 🔥
 
-Linux Sandbox RPG is an interactive Python CLI game that helps you learn and practice Linux commands in a **safe sandbox environment**. Execute real commands in a temporary directory, complete challenges, earn points, and level up as you progress!
+Linux Sandbox RPG is an interactive Python CLI game that helps you learn and practice Linux commands in a **safe, simulated environment**. Test your knowledge, earn points, see practical examples, and level up as you progress — all without executing real commands on your system!
 
 ---
 
 ## Features
 
-- **Safe sandbox**: All commands run inside a temporary folder; nothing affects your real system.  
-- **Massive command list**: 50+ Linux commands supported including `ls`, `cd`, `mkdir`, `touch`, `cat`, `grep`, and more.  
-- **Gamified learning**: Earn points for correct command usage, get streak bonuses, and level up.  
-- **Hints system**: Each round gives a description of what command to use.  
-- **Interactive execution**: Run commands like `mkdir`, `ls`, `cat`, and see their effects in real-time inside the sandbox.
+- **Trivia-based learning**: Commands are simulated — no actual files or directories are changed.  
+- **Massive command list**: 80+ Linux commands supported including `ls`, `cd`, `mkdir`, `touch`, `cat`, `grep`, `chmod`, and more.  
+- **Gamified progression**: Earn points for correct answers, build streaks for bonuses, and level up.  
+- **Hints system**: Each round gives a description of the command to help you recall it.  
+- **Practical explanations**: After each answer, see a detailed explanation, usage format, and real-world examples.  
+- **Expandable dataset**: Commands are loaded from a JSON file, making it easy to scale up to hundreds of commands.  
