@@ -1,7 +1,7 @@
 {
   "commands": [
   {"cmd":"read","desc":"Read input from user","category":"shell","explanation":"Reads a line from standard input and assigns it to a variable.","usage":"read variable","examples":["read name","echo $name"]},
-  {"cmd":"test","desc":"Evaluate expressions","category":"shell","explanation":"Tests file types, string comparison, and arithmetic expressions.","usage":"test EXPRESSION","examples":["test -f file.txt","test 5 -gt 3"]},
+  {"cmd":"test","desc":"Evaluate conditional expressions","category":"shell","explanation":"Tests conditions such as file types, string comparisons, and numeric comparisons; returns true (0) or false (1) for use in control flow.","usage":"test EXPRESSION","examples":["test -f file.txt","test 5 -gt 3","test \"$name\" = \"Alice\""]},
   {"cmd":"type","desc":"Show command type","category":"shell","explanation":"Shows if a command is built-in, alias, function, or external program.","usage":"type command","examples":["type ls","type cd"]},
   {"cmd":"seq","desc":"Generate sequences of numbers","category":"shell","explanation":"Prints numbers from start to end optionally with a step.","usage":"seq start end","examples":["seq 1 10","seq 0 2 10"]},
   {"cmd":"yes","desc":"Print string repeatedly","category":"shell","explanation":"Outputs a string (default 'y') until killed.","usage":"yes [string]","examples":["yes","yes no"]},
@@ -59,7 +59,7 @@
   {"cmd":"fg","desc":"Bring background job to foreground","category":"shell","explanation":"Moves a background job into the foreground.","usage":"fg [%job]","examples":["fg %1"]},
   {"cmd":"bg","desc":"Resume job in background","category":"shell","explanation":"Resumes a suspended job in the background.","usage":"bg [%job]","examples":["bg %1"]},
   {"cmd":"wait","desc":"Wait for background processes","category":"shell","explanation":"Waits for all background processes or a specific PID to finish.","usage":"wait [pid]","examples":["wait","wait 1234"]},
-  {"cmd":"expr","desc":"Evaluate expressions","category":"shell","explanation":"Performs arithmetic and string operations.","usage":"expr expression","examples":["expr 5 + 3","expr length string"]},
+  {"cmd":"expr","desc":"Evaluate arithmetic or string expressions","category":"shell","explanation":"Performs arithmetic and string operations.","usage":"expr expression","examples":["expr 5 + 3","expr length string"]},
   {"cmd":"paste","desc":"Merge lines of files","category":"files","explanation":"Combines lines from multiple files horizontally.","usage":"paste file1 file2","examples":["paste file1.txt file2.txt"]},
   {"cmd":"tr","desc":"Translate or delete characters","category":"files","explanation":"Transforms or removes characters in input.","usage":"tr SET1 SET2","examples":["echo abc | tr a-z A-Z","tr -d '\n' < file.txt"]},
   {"cmd":"split","desc":"Split file into pieces","category":"files","explanation":"Splits large files into smaller files of fixed size or lines.","usage":"split [options] file","examples":["split -l 1000 bigfile.txt part_"]},
