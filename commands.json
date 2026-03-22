@@ -57,7 +57,7 @@
   {"cmd":"ss","desc":"Socket statistics","category":"network","explanation":"Displays detailed socket statistics.","usage":"ss [options]","examples":["ss -tuln","ss -s"]},
   {"cmd":"traceroute","desc":"Trace route packets take","category":"network","explanation":"Shows path packets take to a host.","usage":"traceroute host","examples":["traceroute google.com"]},
   {"cmd":"basename","desc":"Extract filename from path","category":"filesystem","explanation":"Prints the final component of a path.","usage":"basename path","examples":["basename /home/user/file.txt"]},
-  {"cmd":"dirname","desc":"Extract directory path","category":"filesystem","explanation":"Prints the directory portion of a path.","usage":"dirname path","examples":["dirname /home/user/file.txt"]}
+  {"cmd":"dirname","desc":"Extract directory path","category":"filesystem","explanation":"Prints the directory portion of a path.","usage":"dirname path","examples":["dirname /home/user/file.txt"]},
   {"cmd":"diff","desc":"Compare files line by line","category":"files","explanation":"Shows differences between two files.","usage":"diff file1 file2","examples":["diff old.txt new.txt"]},
   {"cmd":"cmp","desc":"Compare two files byte by byte","category":"files","explanation":"Reports the first difference between two files.","usage":"cmp file1 file2","examples":["cmp file1.bin file2.bin"]},
   {"cmd":"comm","desc":"Compare sorted files","category":"files","explanation":"Shows common and unique lines between two sorted files.","usage":"comm file1 file2","examples":["comm sorted1.txt sorted2.txt"]},
